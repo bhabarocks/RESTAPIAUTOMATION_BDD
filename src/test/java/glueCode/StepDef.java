@@ -162,9 +162,9 @@ public class StepDef extends Utils {
     @And("^I find out the number of days where the temperature is predicted to be above \"([^\"]*)\" degrees$")
     public void iFindOutTheNumberOfDaysWhereTheTemperatureIsPredictedToBeAboveDegrees(int temperatureinDegreeCelsius) throws Throwable {
         int numberOFDays = numberofDaysHigherthanTwentyDegrees(response,temperatureinDegreeCelsius);
-        if(temperatureinDegreeCelsius>=0)
+        if(numberOFDays>=0)
         {
-            Assert.assertTrue("There are no days higher than "+temperatureinDegreeCelsius, temperatureinDegreeCelsius>=0);
+            Assert.assertTrue("There are no days higher than "+temperatureinDegreeCelsius, numberOFDays>=0);
             Reporter.addStepLog(Status.PASS + " :: Number of Days having Temperature higher than " + temperatureinDegreeCelsius+" is :: " + numberOFDays);
         }
         else
