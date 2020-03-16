@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extentreports>
+    <configuration>
+	 <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>dark</theme>
+	<!-- enable or disable timeline on dashboard -->
+        <enableTimeline>true</enableTimeline>
+        <encoding>UTF-8</encoding>
+	<!-- timestamp format -->
+	<timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+        <documentTitle>Cucumber Extent Reports - v1.0.0</documentTitle>
+        <reportName>Cucumber Extent Reports</reportName>
+        <reportHeadline> - v1.0.0</reportHeadline>
+    </configuration>
+</extentreports>

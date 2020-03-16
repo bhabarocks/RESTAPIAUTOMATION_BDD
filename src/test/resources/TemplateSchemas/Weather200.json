@@ -1,0 +1,254 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cod": {
+      "type": "string"
+    },
+    "message": {
+      "type": "integer"
+    },
+    "cnt": {
+      "type": "integer"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dt": {
+            "type": "integer"
+          },
+          "main": {
+            "type": "object",
+            "properties": {
+              "temp": {
+                "type": [
+                  "number",
+                  "integer"
+                ]
+              },
+              "feels_like": {
+                "type": "number"
+              },
+              "temp_min": {
+                "type": [
+                  "number",
+                  "integer"
+                ]
+              },
+              "temp_max": {
+                "type": [
+                  "number",
+                  "integer"
+                ]
+              },
+              "pressure": {
+                "type": "integer"
+              },
+              "sea_level": {
+                "type": "integer"
+              },
+              "grnd_level": {
+                "type": "integer"
+              },
+              "humidity": {
+                "type": "integer"
+              },
+              "temp_kf": {
+                "type": [
+                  "number",
+                  "integer"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "temp",
+              "feels_like",
+              "temp_min",
+              "temp_max",
+              "pressure",
+              "sea_level",
+              "grnd_level",
+              "humidity",
+              "temp_kf"
+            ]
+          },
+          "weather": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "main": {
+                  "type": "string",
+                  "enum": [
+                    "Rain",
+                    "Clear",
+                    "Clouds"
+                  ]
+                },
+                "description": {
+                  "type": "string",
+                  "enum": [
+                    "light rain",
+                    "clear sky",
+                    "scattered clouds",
+                    "few clouds",
+                    "overcast clouds",
+                    "broken clouds"
+                  ]
+                },
+                "icon": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "main",
+                "description",
+                "icon"
+              ]
+            },
+            "additionalItems": false
+          },
+          "clouds": {
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "all"
+            ]
+          },
+          "wind": {
+            "type": "object",
+            "properties": {
+              "speed": {
+                "type": "number"
+              },
+              "deg": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "speed",
+              "deg"
+            ]
+          },
+          "rain": {
+            "type": "object",
+            "properties": {
+              "3h": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "3h"
+            ]
+          },
+          "sys": {
+            "type": "object",
+            "properties": {
+              "pod": {
+                "type": "string",
+                "enum": [
+                  "d",
+                  "n"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "pod"
+            ]
+          },
+          "dt_txt": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "dt",
+          "main",
+          "weather",
+          "clouds",
+          "wind",
+          "sys",
+          "dt_txt"
+        ]
+      },
+      "additionalItems": false
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "coord": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lon": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "lat",
+            "lon"
+          ]
+        },
+        "country": {
+          "type": "string"
+        },
+        "population": {
+          "type": "integer"
+        },
+        "timezone": {
+          "type": "integer"
+        },
+        "sunrise": {
+          "type": "integer"
+        },
+        "sunset": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "coord",
+        "country",
+        "population",
+        "timezone",
+        "sunrise",
+        "sunset"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "cod",
+    "message",
+    "cnt",
+    "list",
+    "city"
+  ]
+}
